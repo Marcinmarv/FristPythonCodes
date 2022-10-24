@@ -23,7 +23,7 @@ def game():
         chosen = first
         com = second
       else:
-        chose = second
+        chosen = second
         com = first
       if chosen['follower_count'] > com['follower_count']:
         print("Dobra odpowiedz!")
