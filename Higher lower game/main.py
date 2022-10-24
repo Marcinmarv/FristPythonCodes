@@ -4,30 +4,32 @@ print(logo)
 from game_data import data
 import random
 from replit import clear
-def giera():
+
+
+def game():
     score = 0
     end = False
-    pierwsza={}
-    pierwsza= random.choice(data)
+    first={}
+    first= random.choice(data)
     while not end:
-      print(f"Compare A: {pierwsza['name']}, a {pierwsza['description']}, from {pierwsza['country']}")
-      druga = {}
-      druga = random.choice(data)
+      print(f"Compare A: {first['name']}, a {first['description']}, from {first['country']}")
+      second = {}
+      second = random.choice(data)
       print(vs)
-      print(f"Compare B: {druga['name']}, a {druga['description']}, from {druga['country']}")
-      druga2 = druga
-      chose = input("Who has more fallowers? Type A or B ")
-      if chose.upper() == "A":
-        chose = pierwsza
-        kom = druga
+      print(f"Compare B: {second['name']}, a {second['description']}, from {second['country']}")
+      second_2 = second
+      chosen = input("Who has more fallowers? Type A or B ")
+      if chosen.upper() == "A":
+        chosen = first
+        com = second
       else:
-        chose = druga
-        kom = pierwsza
-      if chose['follower_count'] > kom['follower_count']:
+        chose = second
+        com = first
+      if chosen['follower_count'] > com['follower_count']:
         print("Dobra odpowiedz!")
         score += 1
         print(score)
-        pierwsza = druga2
+        first = second_2
         clear()
         print(logo)
         print(f"Masz racje Twój wynik to:{score}!")
@@ -35,16 +37,4 @@ def giera():
         end = True
         print(f"Zła odpowiedź koniec gry! Twój wynik to {score}!")
         
-
-# def gra():
-  
-# pierwsza={}
-# pierwsza= random.choice(data)
-# print(f"Compare A: {pierwsza['name']}, a {pierwsza['description']}, from {pierwsza['country']}")
-  
-  
-  
-# a= random.choice(data)
-
-# gra()
-giera()
+game()
